@@ -1,354 +1,149 @@
 <!DOCTYPE html>
-<html>
-<head>
-<!-- Standard Meta -->
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="img/favicon.png">
 
-<!-- Site Properties -->
-<title>好吃又好玩</title>
-<link rel="stylesheet" type="text/css" href="dist/components/reset.css">
-<link rel="stylesheet" type="text/css" href="dist/components/site.css">
+    <title>FlatLab Frontend | Price</title>
 
-<link rel="stylesheet" type="text/css"
-	href="dist/components/container.css">
-<link rel="stylesheet" type="text/css" href="dist/components/grid.css">
-<link rel="stylesheet" type="text/css" href="dist/components/header.css">
-<link rel="stylesheet" type="text/css" href="dist/components/image.css">
-<link rel="stylesheet" type="text/css" href="dist/components/menu.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link rel="stylesheet" href="css/flexslider.css"/>
+    <link href="assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	
 
-<link rel="stylesheet" type="text/css"
-	href="dist/components/divider.css">
-<link rel="stylesheet" type="text/css"
-	href="dist/components/dropdown.css">
-<link rel="stylesheet" type="text/css"
-	href="dist/components/segment.css">
-<link rel="stylesheet" type="text/css" href="dist/components/button.css">
-<link rel="stylesheet" type="text/css" href="dist/components/list.css">
-<link rel="stylesheet" type="text/css" href="dist/components/icon.css">
-<link rel="stylesheet" type="text/css"
-	href="dist/components/sidebar.css">
-<link rel="stylesheet" type="text/css"
-	href="dist/components/transition.css">
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<link rel="stylesheet" type="text/css" href="dist/components/card.css">
-<style type="text/css">
-.hidden.menu {
-	display: none;
-}
 
-.masthead.segment {
-	min-height: 700px;
-	padding: 1em 0em;
-}
+      <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+	<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link href="css/theme.css" rel="stylesheet">
 
-.masthead .logo.item img {
-	margin-right: 1em;
-}
+	
 
-.masthead .ui.menu .ui.button {
-	margin-left: 0.5em;
-}
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-.masthead h1.ui.header {
-	margin-top: 2em;
-	margin-bottom: 0em;
-	font-size: 4em;
-	font-weight: normal;
-}
+  <body>
+   
+    <!--header end-->
 
-.masthead h2 {
-	font-size: 1em;
-	font-weight: normal;
-}
+   <div class="main-im">
 
-.ui.vertical.stripe {
-	padding: 6em 0em;
-}
-
-.ui.vertical.stripe h3 {
-	font-size: 2em;
-}
-
-.ui.vertical.stripe .button+h3, .ui.vertical.stripe p+h3 {
-	margin-top: 1em;
-	margin-bottom: 2em;
-}
-
-.ui.vertical.stripe .floated.image {
-	clear: both;
-}
-
-.ui.vertical.stripe p {
-	font-size: 1.33em;
-}
-
-.ui.vertical.stripe .horizontal.divider {
-	margin: 3em 0em;
-}
-
-.quote.stripe.segment {
-	padding: 0em;
-}
-
-.quote.stripe.segment .grid .column {
-	padding-top: 5em;
-	padding-bottom: 5em;
-}
-
-.footer.segment {
-	padding: 5em 0em;
-}
-
-.secondary.pointing.menu .toc.item {
-	display: none;
-}
-
-@media only screen and (max-width: 700px) {
-	.ui.fixed.menu {
-		display: none !important;
-	}
-	.secondary.pointing.menu .item, .secondary.pointing.menu .menu {
-		display: none;
-	}
-	.secondary.pointing.menu .toc.item {
-		display: block;
-	}
-	.masthead.segment {
-		min-height: 350px;
-	}
-	.masthead h1.ui.header {
-		font-size: 2em;
-		margin-top: 1.5em;
-	}
-}
-a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-</style>
-
-<script src="assets/library/jquery.min.js"></script>
-<script src="dist/components/visibility.js"></script>
-<script src="dist/components/sidebar.js"></script>
-<script src="dist/components/transition.js"></script>
-<script>
-  $(document)
-    .ready(function() {
-
-      // fix menu when passed
-      $('.masthead')
-        .visibility({
-          once: false,
-          onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
-          },
-          onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
-          }
-        })
-      ;
-
-      // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-      ;
-
-    })
-  ;
-  </script>
-</head>
-<body>
-
-	<!-- Following Menu -->
-	<div class="ui large top fixed hidden menu">
-		<div class="ui container">
-			<a class="active item">首页</a> <a class="item">好吃</a> <a href="article.html" class="item">好玩</a>
-			<a class="item">关于</a>
-			<div class="right menu">
-			<a class="item"> <i class="gamepad icon"></i> 玩游戏
-						</a> <a class="item"> <i class="video camera icon"></i>
-							看电影
-						</a>
+	<div id="open_im" class="open-im">&nbsp;</div>  
+	
+	<div class="im_main" id="im_main">
+		<div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+		<a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" class="im-qq qq-a" title="在线QQ客服">
+			<div class="qq-container"></div>
+			<div class="qq-hover-c"><img class="img-qq" src="img/qq.png"></div>
+			<span> QQ在线咨询</span>
+		</a>
+		<div class="im-tel">
+			<div>QQ号</div>
+			<div class="tel-num">8888888888</div>
+			<div>售后咨询热线</div>
+			<div class="tel-num">029-12345678</div>
+		</div>
+		<div class="im-footer" style="position:relative">
+			<div class="weixing-container">
+				<div class="weixing-show">
+					<div class="weixing-txt">微信扫一扫<br>关注三友腾达<br>获取更多资讯</div>
+					<img class="weixing-ma" src="img/weixing-ma.jpg">
+					<div class="weixing-sanjiao"></div>
+					<div class="weixing-sanjiao-big"></div>
+				</div>
 			</div>
+			<div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>
+			<div style="clear:both"></div>
 		</div>
 	</div>
+	
+</div>
 
-	<!-- Sidebar Menu -->
-	<div class="ui vertical inverted sidebar menu">
-		<a class="active item">首页</a> <a class="item">好吃</a> <a href="article.html" class="item">好玩</a>
-		<a class="item">关于</a> <a class="item">Login</a> <a class="item">Signup</a>
-	</div>
-
-
-	<!-- Page Contents -->
-	<div class="pusher">
-		<div class="ui inverted vertical masthead center aligned segment">
-
-			<div class="ui container">
-				<div class="ui large secondary inverted pointing menu">
-					<a class="toc item"> <i class="sidebar icon"></i>
-					</a> <a class="active item">首页</a> <a class="item">好吃</a> <a
-					href="article.html"	class="item">好玩</a> <a class="item">关于</a>
-					<div class="right item">
-						<a class="item"> <i class="gamepad icon"></i> 玩游戏
-						</a> <a class="item"> <i class="video camera icon"></i>
-							看电影
-						</a>
+    <!--container start-->
+    <div class="container">
+       <div class="row">
+            <!--feature start-->
+            <div class="text-center feature-head">
+                <h2>欢迎来到三友腾达，我们将竭诚为您服务</h2>
+                <p>Welcome to 3YTD,We will do our best to service you!</p>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                  <!-- colored -->
+				<div class="ih-item square colored effect13 bottom_to_top"><a href="#">
+					<div class="img"><img src="img/shinei-1.png" alt="img"></div>
+					<div class="info">
+						<h3>室内弹性地板</h3>
+						<p>室内弹性地板简单介绍</p>
 					</div>
+				</a></div>
+            <!-- end colored -->
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                <div class="ih-item square colored effect13 bottom_to_top"><a href="#">
+					<div class="img"><img src="img/shiwai-1.png" alt="img"></div>
+					<div class="info">
+						<h3>室外运动场地</h3>
+						<p>室外运动场地简单介绍</p>
+					</div>
+				</a></div>
+            </div>
+		
+            <!--feature end-->
+        </div>
+	<div class="row">
+			 <div class="col-lg-6 col-sm-6">
+            <div class="text-center" style="margin-top: 8px;font-family: 'Microsoft YaHei'!important;">
+				<button class="btn btn-info btn-lg" type="button"><i class="icon-home"></i> 室内弹性地板</button>
 				</div>
-			</div>
-
-			<div class="ui text container">
-				<h1 class="ui inverted header"></h1>
-				<h2></h2>
-				<div class="ui container">
-					<div class="ui vertical stripe quote segment">
-						<div class="ui equal width stackable internally celled grid">
-							<div class="center aligned row">
-								<div class="column">
-									<p class="ui inverted header">
-										<img src="assets/images/avatar/nan.jpg"
-											class="ui avatar image"> <b>jwdstef</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Long time no see."
-									</p>
-									<h3 class="ui inverted header">"Google hosts 持续更新【2016-03-19】."</h3>
-									<p>
-											<button class="green ui button"><i class="cloud icon"></i> <a href="http://pan.baidu.com/s/1botLMmb">点击下载</a> </button>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
+            <!-- end colored -->
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                <div class="text-center" style="margin-top: 8px;font-family: 'Microsoft YaHei'!important;">
+				<button class="btn btn-info btn-lg" type="button"><i class="icon-cloud"></i> 室外运动场地</button>
 				</div>
+            </div>
 			</div>
-		</div>
-
-
-
-		<!-- <div class="ui container">
-			<h2 class="ui dividing header" style="margin: 2em 0em 1em">好玩</h2>
-			<div class="four column ui grid three container">
-				<div class="row">
-					<div class="column">
-						<div class="ui card">
-							<div class="image">
-								<img src="assets/images/avatar/liyinan.png">
-							</div>
-							<div class="content">
-								<a class="header">谈谈李一男</a>
-								<div class="meta">
-									<span class="date">2013年加入</span>
-								</div>
-								<div class="description">Kristy is an art director living
-									in New York.</div>
-							</div>
-							<div class="extra content">
-								<a><i class="user icon"></i> 22 Friends </a>
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="ui card">
-							<div class="content">
-								<div class="header">
-									<img src="assets/images/avatar/nan.jpg"
-										class="ui avatar right spaced image"> Abbreviated Header
-								</div>
-								<div class="description">
-									很早之前就听说了李一男，好像是刚工作的时候，那时候也在做电信相关的一些领域，知道这是个传奇人物，27岁当上华为副总裁，30岁的时候雄姿英发的出去创业
-								</div>
-							</div>
-							<div class="extra content">
-								<a><i class="user icon"></i> 22 Friends </a>
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="ui card">
-						<div class="content">
-						<div class="header">
-									<img src="assets/images/avatar/nan.jpg"
-										class="ui avatar right spaced image"> Abbreviated Header
-								</div></div>
-							<div class="content">
-								<a class="header">Kristy</a>
-								<div class="meta">
-									<span class="date">2013年加入</span>
-								</div>
-								<div class="description">Kristy is an art director living
-									in New York.</div>
-							</div>
-							<div class="extra content">
-								<a><i class="user icon"></i> 22 Friends </a>
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="ui card">
-							<div class="image">
-								<img src="assets/images/avatar/nan.jpg">
-							</div>
-							<div class="content">
-								<a class="header">Kristy</a>
-								<div class="meta">
-									<span class="date">2013年加入</span>
-								</div>
-								<div class="description">Kristy is an art director living
-									in New York.</div>
-							</div>
-							<div class="extra content">
-								<a><i class="user icon"></i> 22 Friends </a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-  <div class="ui vertical stripe segment">
-    <div class="ui text container">
-      <h4 class="ui horizontal header divider">
-        华丽丽的分割线
-      </h4>
-      <h3 class="ui header">为政治正确埋单</h3>
-      <p>比利时爆炸案，欧洲再度陷入恐怖主义的泥淖，而特朗普的嘲讽一语成谶。</br>这事从头说起，应该是两个世纪以前，西方文明成为这个星球的主导者，实事求是的说，就是这样，他们主导了商业规则，政治体系，价值观，以及话语权。</p>
-      <a class="ui large button" target="view_window" href="http://mp.weixin.qq.com/s?__biz=MzI0MjA1Mjg2Ng==&mid=402165623&idx=1&sn=b48a3571913befe7d908dc418448ce1b&scene=0#rd">点击阅读</a>
     </div>
-  </div>
+    <!--container end-->
 
-		<div class="ui inverted vertical footer segment">
-			<div class="ui container">
-				<div
-					class="ui stackable inverted divided equal height stackable grid">
-					<div class="three wide column">
-						<h4 class="ui inverted header">About</h4>
-						<div class="ui inverted link list">
-							<a href="#" class="item">Sitemap</a> <a href="#" class="item">Contact
-								Us</a> <a href="#" class="item">Religious Ceremonies</a> <a href="#"
-								class="item">Gazebo Plans</a>
-						</div>
-					</div>
-					<div class="three wide column">
-						<h4 class="ui inverted header">Services</h4>
-						<div class="ui inverted link list">
-							<a href="#" class="item">Banana Pre-Order</a> <a href="#"
-								class="item">DNA FAQ</a> <a href="#" class="item">How To
-								Access</a> <a href="#" class="item">Favorite X-Men</a>
-						</div>
-					</div>
-					<div class="seven wide column">
-						<h4 class="ui inverted header">Footer Header</h4>
-						<p>Extra space for a call to action inside the footer that
-							could help re-engage users.</p>
-							<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    
 
-</body>
+  <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/hover-dropdown.js"></script>
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="assets/bxslider/jquery.bxslider.js"></script>
 
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/link-hover.js"></script>
+
+
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+
+
+  <script>
+
+  </script>
+<script src="scripts/app.js"></script>
+  </body>
 </html>
