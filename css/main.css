@@ -8754,8 +8754,6 @@ h1[id] {
 
 .ih-item.square {
     position: relative;
-    width: 516px;
-    height: 300px;
     border: 8px solid #fff;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
